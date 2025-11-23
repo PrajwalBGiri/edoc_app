@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bottom-text">
+    OTP is sent to the Aadhaar registered mobile number.<br>
+    Aadhaar: {{ aadhaar }}<br>
+    <strong>(Demo OTP: {{ demo_otp }})</strong>
+</div>
+
+<form method="post">
+    <label>Enter Aadhaar OTP</label>
+    <input type="text" name="otp" placeholder="6-digit OTP">
+
+    <button type="submit" class="primary">Verify & Next</button>
+</form>
+{% endblock %}

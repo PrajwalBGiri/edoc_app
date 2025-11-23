@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bottom-text">
+    Something went wrong. Transfer failed (like Screen 10).
+</div>
+
+<form action="{{ url_for('dashboard') }}" method="get">
+    <button type="submit" class="primary">Retry from Home</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bottom-text">
+    Transfer successful. Document sent to respective department.
+</div>
+
+<form action="{{ url_for('download_document', doc_id=doc_id) }}" method="get">
+    <button type="submit" class="primary">Download document copy</button>
+</form>
+
+<form action="{{ url_for('dashboard') }}" method="get">
+    <button type="submit" class="secondary">Back to Home</button>
+</form>
+{% endblock %}

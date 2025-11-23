@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+    <label>Mobile number (Sign-In ID)</label>
+    <input type="text" name="mobile" placeholder="Enter registered mobile">
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter password">
+
+    <button type="submit" class="primary">Sign-In</button>
+</form>
+
+<div class="bottom-text">
+    <a href="{{ url_for('signup_phone') }}">Don't have an account? Sign-Up</a>
+</div>
+{% endblock %}

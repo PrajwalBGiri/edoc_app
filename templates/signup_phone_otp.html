@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bottom-text">
+    OTP sent to {{ mobile }}. <br>
+    <strong>(Demo OTP: {{ demo_otp }})</strong>
+</div>
+
+<form method="post">
+    <label>Enter OTP</label>
+    <input type="text" name="otp" placeholder="6-digit OTP">
+
+    <button type="submit" class="primary">Verify & Next</button>
+</form>
+{% endblock %}

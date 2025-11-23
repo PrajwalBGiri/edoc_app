@@ -1,0 +1,59 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dashboard-header">
+    <button class="logout-btn" onclick="window.location.href=&quot;{{ url_for('logout') }}&quot;">
+        Log-out
+    </button>
+
+    <div class="dashboard-title">
+        E-Doc Home
+    </div>
+
+    <div style="font-size: 12px; opacity: 0.7;">
+        LOGO
+    </div>
+</div>
+
+<div>
+    <strong>Files</strong>
+    <div class="file-buttons">
+
+        <form method="get" action="{{ url_for('file_vehicle') }}">
+            <button type="submit" class="primary">Vehicle Transfer File</button>
+        </form>
+
+        <form method="get" action="{{ url_for('file_property') }}">
+            <button type="submit" class="primary">Property Transfer File</button>
+        </form>
+
+    </div>
+</div>
+
+<div style="margin-top: 16px;">
+    <strong>History</strong>
+    <div class="history-list">
+
+        {% if history %}
+
+            {% for h in history %}
+                <div class="history-item">
+                    <div>File: {{ h.file_type|capitalize }}</div>
+                    <div>Status: {{ h.status }}</div>
+                    <div style="opacity: 0.7;">
+                        {{ h.details }}
+                    </div>
+                </div>
+            {% endfor %}
+
+        {% else %}
+            <div class="bottom-text">
+                You didn’t use any files till now
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

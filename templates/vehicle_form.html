@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bottom-text">
+    Vehicle Transfer – Fill required details.
+</div>
+
+<form method="post">
+    <label>Owner Name</label>
+    <input type="text" name="owner_name" placeholder="Current owner">
+
+    <label>Vehicle Reg. Number</label>
+    <input type="text" name="reg_number" placeholder="KA-01-XXXX">
+
+    <label>Transfer To (Name)</label>
+    <input type="text" name="to_name" placeholder="New owner">
+
+    <button type="submit" class="primary">Next</button>
+</form>
+{% endblock %}

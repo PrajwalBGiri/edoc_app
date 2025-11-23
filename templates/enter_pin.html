@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bottom-text">
+    Enter Transfer PIN to continue.
+</div>
+
+<form method="post">
+    <label>6-digit Transfer PIN</label>
+    <input type="password" name="pin" maxlength="6" class="pin-input" placeholder="••••••">
+
+    <button type="submit" class="primary">Enter</button>
+</form>
+
+<div class="bottom-text">
+    If PIN is wrong, this acts like Screen 7 (wrong transfer PIN).
+</div>
+{% endblock %}

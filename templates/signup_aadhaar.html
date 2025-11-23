@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+    <label>Enter Aadhaar number</label>
+    <input type="text" name="aadhaar" placeholder="12-digit Aadhaar">
+
+    <button type="submit" class="primary">Send OTP</button>
+</form>
+
+<div class="bottom-text">
+    OTP will be sent to Aadhaar registered mobile number.
+</div>
+{% endblock %}
